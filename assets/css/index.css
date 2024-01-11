@@ -246,6 +246,7 @@ img{
  }
  .about_subtitle{
     margin-bottom: var(--mb-2);
+    color: hsl(250, 69%, 61%);
  }
  .about_image{
     justify-content:center; 
@@ -284,6 +285,13 @@ img{
     display: flex;
     align-items: center;
  }
+ 
+.skill_name{
+    color: #222;
+}
+.skill_name:hover{
+    color: var(--first-color);
+}
  .skill_bar{
     position: absolute;
     left: 0;
@@ -305,7 +313,7 @@ img{
  .skill_python{
     width: 60%;
  }
- .skill_mongodb{
+ .skill_mysql{
     width: 75%;
  }
 .skills_image{
@@ -519,4 +527,16 @@ img{
  }
  .contact{
     padding-top: 2rem;
+ }
+ .list_style{
+    list-style:circle;
+ }
+ .point{
+    margin-bottom: 1.5rem;
+ }
+ .subtitle{
+    color: var(--first-color);
+ }
+ .text_color{
+    color:  hsl(250, 69%, 61%);;
  }
