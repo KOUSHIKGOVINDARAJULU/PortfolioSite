@@ -566,6 +566,9 @@ img{
     top: 50%;
     transform: translate(-50%,-50%) scale(1);
 }
+.expertise{
+    color:var(--first-color);
+}
 
 .popup h2{
     font-size: 30px;
