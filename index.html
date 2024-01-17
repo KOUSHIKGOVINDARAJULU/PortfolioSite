@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <title>Koushik Kumar</title>
 </head>
 <body>
@@ -47,15 +48,15 @@
         <!-- home section -->
         <section class="home bd-grid" id="home">
             <div class="home-data" data-aos="fade-down">
-                <h1 class="home-title">Hi, <br>I'm <span class="home-text-color">Koushik Kumar G</span></br>Frontend-Developer</h1>
-                <a href="#" class="button">Contact</a>
+                <h1 class="home-title">Hi, <span id="stranger_name"> </span><br>I'm <span class="home-text-color">Koushik Kumar G</span></br>Frontend-Developer</h1>
+                <a href="#" class="button" id="contact_bttn">Contact</a>
             </div>
             <div class="home-social">
-                <a href="#" class="home-social-icons" data-aos="fade-down" data-aos-delay="250">
+                <a href="https://www.linkedin.com/in/koushik-kumar-g-2468241aa/" class="home-social-icons" data-aos="fade-down" data-aos-delay="250">
                     <i class='bx bxl-linkedin-square' style='color:#0705a8' ></i></a>
-                <a href="#" class="home-social-icons" data-aos="fade-down" data-aos-delay="300">
+                <a href="https://github.com/KOUSHIKGOVINDARAJULU" class="home-social-icons" data-aos="fade-down" data-aos-delay="300">
                     <i class='bx bxl-github' style='color:#0705a8' data-aos-delay="250"></i></a>
-                <a href="#" class="home-social-icons" data-aos="fade-down" data-aos-delay="350">
+                <a href="https://www.instagram.com/koushik_kumar_g/" class="home-social-icons" data-aos="fade-down" data-aos-delay="350">
                     <i class='bx bxl-instagram-alt' style='color:#0705a8'></i></a>
                 <!-- <a href="#" class="home-social-icons" data-aos="fade-right">
                     <i class='bx bxl-linkedin-square' style='color:#0705a8' ></i></a> -->
@@ -108,7 +109,7 @@
                 <div>
                     <h2 class="skills_subtitle" data-aos="fade-down" data-aos-delay="100">Professional Skills</h2>
                     <p class="skills_text" data-aos="fade-down" data-aos-delay="150">Without Sharpen your weapon; standing on the battlefiled would not increase the chance of winning</p>
-                    <p class="certificate_text skills_text">Click The Skills Name to View My Verfied Certificate... <br><span class="text_color">Eg: If You Click the HTML5 Then you Will Get My HTML Original Certificate</span></p>
+                    <p data-aos="fade-down" data-aos-delay="200" class="certificate_text skills_text">Click The Skills Name to View My Verified Certificate... <br><span class="text_color">Eg: If You Click the HTML5 Then you Will Get My HTML Original Certificate</span></p>
                     <!-- skills -->
                     <div class="skills_list" data-aos="fade-right">
                         <div class="skills_name">
@@ -153,6 +154,14 @@
                         </div>
                         <div><span class="skill_percentage">75%</span></div>
                         <div class="skill_bar skill_mysql"></div>
+                    </div>
+                    <div class="skills_list" data-aos="fade-right" data-aos-delay="250">
+                        <div class="skills_name">
+                            <i class='bx bxl-git skill_icon'></i>
+                            <a href="https://www.guvi.in/verify-certificate?id=X6791158f092mP6Jbr" class="skill_name">GIT(Version Control)</a>
+                        </div>
+                        <div><span class="skill_percentage">85%</span></div>
+                        <div class="skill_bar skill_git"></div>
                     </div>
                 </div>
             </div>
@@ -235,11 +244,29 @@
          <section class="contact section" id="contact">
             <h2 class="section_title" data-aos="fade-down">Contact</h2>
             <div class="contact_container bd-grid" >
-                <form action="#" class="contact_form">
-                    <input type="text" placeholder="Name" class="control_input" data-aos="fade-right" data-aos-delay="300">
-                    <input type="email" placeholder="Email" class="control_input" data-aos="fade-right" data-aos-delay="350">
-                    <textarea name="" id="" cols="0" rows="10" class="control_input" data-aos="fade-right" data-aos-delay="400"></textarea>
-                    <input type="button" value="Send" class="control_button button" data-aos="fade-right" data-aos-delay="100">
+                <form class="contact_form" onsubmit=" sendEmail(); reset(); return false">
+                    <div>
+                        <input type="text" id="name_user" placeholder="Name" class="control_input" data-aos="fade-right" data-aos-delay="300" required >
+                        <span class="error"></span>
+                    </div>
+                    <div>
+                        <input type="email" id="email_user" placeholder="Email" class="control_input" data-aos="fade-right" data-aos-delay="350" required>
+                        <span class="error"></span>
+                    </div>
+                    
+                    <div>
+                        <textarea name="" id="message_user" cols="0" rows="10" class="control_input" data-aos="fade-right" data-aos-delay="400" required></textarea>
+                        <span class="error"></span>
+                    </div>
+                    <div>
+                        <button type="submit"  class="control_button button" data-aos="fade-right" data-aos-delay="100">Send</button>
+                        <div class="popup" id="popup">
+                            <i class="uil uil-check-circle tick_icon"></i>
+                            <h2>Thank You !</h2>
+                            <p>Your Message Has Send Successfully</p>
+                            <button type="button" >OK</button>
+                        </div>
+                    </div>
                 </form>
             </div>
          </section>
@@ -247,19 +274,19 @@
          <footer class="footer">
             <p class="footer_title">Koushik Kumar G</p>
             <div class="footer_socials">
-                <a href="#" class="footer-social-icons">
+                <a href="https://www.linkedin.com/in/koushik-kumar-g-2468241aa/" class="footer-social-icons">
                     <i class='bx bxl-linkedin-square' ></i></a>
-                <a href="#" class="footer-social-icons">
+                <a href="https://github.com/KOUSHIKGOVINDARAJULU" class="footer-social-icons">
                     <i class='bx bxl-github'></i></a>
-                <a href="#" class="footer-social-icons">
+                <a href="https://www.instagram.com/koushik_kumar_g/" class="footer-social-icons">
                     <i class='bx bxl-instagram-alt' ></i></a>
-                <a href="#" class="footer-social-icons">
-                    <i class='bx bxl-linkedin-square' ></i></a>
             </div>
             <p>&#169; 2024 copyright all right reserved</p>
          </footer>
     </main>
-    <script src="assets/Javascript/index.js"></script>  
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="assets/Javascript/index.js"></script> 
+    <script src="assets/Javascript/contactForm.js"></script> 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>

@@ -1,5 +1,5 @@
 // showing Menu
-const menuBar = (toggleId,navId) =>{
+let menuBar = (toggleId,navId) =>{
     const toggle = document.getElementById(toggleId);
     const nav = document.getElementById(navId)
 
@@ -22,3 +22,23 @@ function linkActive(){
 }
 
 navLink.forEach(n => n.addEventListener('click',linkActive))
+
+
+
+// strangers name 
+// const promtName = prompt("Enter Your Name");
+// const strName = document.getElementById('stranger_name');
+// if(promtName){
+//     let sno = localStorage.length + 1;
+//     strName.innerHTML= (promtName);
+//     localStorage.setItem(sno,promtName);
+// }
+// else{
+//     strName.innerHTML = ""
+// }
+
+// const formInput = document.getElementById("form");
+// formInput.addEventListener("submit",function(event){
+//     event.preventDefault()
+// });
+

@@ -316,6 +316,9 @@ img{
  .skill_mysql{
     width: 75%;
  }
+ .skill_git{
+    width: 75%;
+ }
 .skills_image{
     margin-bottom: var(--mb-2);
     
@@ -407,10 +410,11 @@ img{
     border-radius: 0.5rem;
     border: 1.5px solid var(--second-color);
     outline: none;
-    margin-bottom: var(--mb-4);
+    margin: 10px 0;
+  
  }
  .control_button{
-    display: block;
+    display: block; 
     border: none;
     outline: none;
     font-size: var(--normalfont-size);
@@ -540,3 +544,50 @@ img{
  .text_color{
     color:  hsl(250, 69%, 61%);;
  }
+ #stranger_name{
+    color: hsl(250, 69%, 61%);
+ }
+ .popup{
+    width: 350px;
+    background: #ab3232;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0,30px,30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+ }
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup h2{
+    font-size: 30px;
+    font-weight: var(--font-bold);
+    margin: 10px 0 10px;
+
+}
+.popup button{
+    width: 50%;
+    margin: 20px 0 20px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);}
+.tick_icon{
+    font-size: 80px;
+    color: rgb(8, 161, 8);
+    
+
+}
